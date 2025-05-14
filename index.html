@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexlify - Intelligent Finance Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="font-inter bg-navy text-white">
+    <!-- Hero Section -->
+    <header
+        class="relative bg-gradient-to-b from-navy to-blue-900 text-white min-h-screen flex flex-col overflow-hidden">
+        <!-- Grid Background with Shines -->
+        <div class="absolute inset-0 grid-background">
+            <div class="shine shine-3"></div>
+        </div>
+        <!-- Navigation -->
+        <nav class="flex justify-between items-center px-6 py-4 md:px-16 z-10">
+            <div class="flex items-center">
+                <span class="text-3xl font-poppins font-bold">Nexlify</span>
+                <span class="text-blue-400 text-2xl ml-2">.</span>
+            </div>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#about" class="hover:text-blue-400 transition">About</a>
+                <a href="#features" class="hover:text-blue-400 transition">Features</a>
+                <a href="#blog" class="hover:text-blue-400 transition">Blog</a>
+                <a href="#pricing" class="hover:text-blue-400 transition">Pricing</a>
+                <a href="#contact"
+                    class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition transform hover:scale-105">Contact
+                    Us</a>
+            </div>
+            <button class="md:hidden text-2xl z-10" onclick="toggleMenu()">☰</button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-navy text-white px-6 py-4 z-10">
+            <a href="#about" class="block py-2 hover:text-blue-400">About</a>
+            <a href="#features" class="block py-2 hover:text-blue-400">Features</a>
+            <a href="#blog" class="block py-2 hover:text-blue-400">Blog</a>
+            <a href="#pricing" class="block py-2 hover:text-blue-400">Pricing</a>
+            <a href="#contact" class="block bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 mt-2">Contact
+                Us</a>
+        </div>
+        <!-- Hero Content -->
+        <div class="flex-grow flex flex-col items-center justify-center text-center px-6 md:px-16 z-10">
+            <h1 class="text-4xl md:text-6xl font-poppins font-bold mb-4 max-w-4xl leading-tight">Empower Your Future
+                with Intelligent Finance</h1>
+            <p class="text-lg md:text-xl mb-8 max-w-2xl font-inter" id="hero-subtext">Streamline operations, unlock
+                insights, and drive success with cutting-edge solutions.</p>
+            <div class="flex flex-col md:flex-row items-center mb-6 max-w-md w-full">
+                <input type="email" placeholder="Enter your email..." id="hero-input"
+                    class="w-full md:w-auto flex-grow px-4 py-3 rounded-l-full md:rounded-r-none bg-gray-800 text-white border-none focus:outline-none focus:ring-2 focus:ring-blue-400">
+                <button id="hero-button"
+                    class="w-full md:w-auto bg-blue-600 text-white px-6 py-3 rounded-r-full md:rounded-l-none hover:bg-blue-700 transition transform hover:scale-105 mt-2 md:mt-0">Join
+                    Now</button>
+            </div>
+            <div class="flex space-x-6 text-sm font-inter">
+                <span class="flex items-center"><svg class="w-4 h-4 mr-1 text-blue-400" fill="currentColor"
+                        viewBox="0 0 20 20">
+                        <path
+                            d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586l-2.293-2.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l8-8a1 1 0 000-1.414z" />
+                    </svg>No credit card needed</span>
+                <span class="flex items-center"><svg class="w-4 h-4 mr-1 text-blue-400" fill="currentColor"
+                        viewBox="0 0 20 20">
+                        <path
+                            d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586l-2.293-2.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l8-8a1 1 0 000-1.414z" />
+                    </svg>14-day free trial</span>
+            </div>
+        </div>
+        <!-- Customer Ratings -->
+        <div class="text-center py-6 z-10">
+            <div class="flex justify-center mb-2">
+                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.97a1 1 0 00.95.69h4.15c.969 0 1.371 1.24.588 1.81l-3.357 2.44a1 1 0 00-.364 1.118l1.287 3.97c.3.921-.755 1.688-1.539 1.118l-3.357-2.44a1 1 0 00-1.175 0l-3.357 2.44c-.784.57-1.838-.197-1.539-1.118l1.287-3.97a1 1 0 00-.364-1.118L2.75 9.397c-.783-.57-.38-1.81.588-1.81h4.15a1 1 0 00.95-.69l1.286-3.97z" />
+                </svg>
+                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.97a1 1 0 00.95.69h4.15c.969 0 1.371 1.24.588 1.81l-3.357 2.44a1 1 0 00-.364 1.118l1.287 3.97c.3.921-.755 1.688-1.539 1.118l-3.357-2.44a1 1 0 00-1.175 0l-3.357 2.44c-.784.57-1.838-.197-1.539-1.118l1.287-3.97a1 1 0 00-.364-1.118L2.75 9.397c-.783-.57-.38-1.81.588-1.81h4.15a1 1 0 00.95-.69l1.286-3.97z" />
+                </svg>
+                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.97a1 1 0 00.95.69h4.15c.969 0 1.371 1.24.588 1.81l-3.357 2.44a1 1 0 00-.364 1.118l1.287 3.97c.3.921-.755 1.688-1.539 1.118l-3.357-2.44a1 1 0 00-1.175 0l-3.357 2.44c-.784.57-1.838-.197-1.539-1.118l1.287-3.97a1 1 0 00-.364-1.118L2.75 9.397c-.783-.57-.38-1.81.588-1.81h4.15a1 1 0 00.95-.69l1.286-3.97z" />
+                </svg>
+                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.97a1 1 0 00.95.69h4.15c.969 0 1.371 1.24.588 1.81l-3.357 2.44a1 1 0 00-.natural-language 1.118l1.287 3.97c.3 .921-.755 1.688-1.539 1.118l-3.357-2.44a1 1 0 00-1.175 0l-3.357 2.44c-.784 .57-1.838-.197-1.539-1.118l1.287-3.97a1 1 0 00-.364-1.118L2.75 9.397c-.783-.57-.38-1.81 .588-1.81h4.15a1 1 0 00 .95-.69l1.286-3.97z" />
+                </svg>
+                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.97a1 1 0 00 .95 .69h4.15c .969 0 1.371 1.24 .588 1.81l-3.357 2.44a1 1 0 00-.364 1.118l1.287 3.97c .3 .921-.755 1.688-1.539 1.118l-3.357-2.44a1 1 0 00-1.175 0l-3.357 2.44c-.784 .57-1.838-.197-1.539-1.118l1.1.287-3.97a1 1 0 00-.364-1.118L2.75 9.397c-.783-.57-.38-1.81 .588-1.81h4.15a1 1 0 00 .95-.69l1.286-3.97z" />
+                </svg>
+            </div>
+            <p class="font-inter">Trusted by 50k+ global users</p>
+            <div class="flex justify-center space-x-2 mt-2">
+                <img src="/images/img1.jpeg" alt="User 1" class="w-8 h-8 rounded-full border border-blue-400">
+                <img src="./images/img2.avif" alt="User 2" class="w-8 h-8 rounded-full border border-blue-400">
+                <img src="./images/img3.jpeg" alt="User 3" class="w-8 h-8 rounded-full border border-blue-400">
+            </div>
+        </div>
+    </header>
+    <!-- About Section -->
+    <section id="about" class="relative bg-gradient-to-b from-navy to-blue-900 text-white py-20 overflow-hidden">
+        <!-- Grid Background with Gradient Overlay -->
+        <div class="absolute inset-0 gradient-overlay"></div>
+        <!-- About Content -->
+        <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-16">
+            <h2 class="text-4xl md:text-5xl font-poppins font-bold text-center mb-4 fade-in-up">Discover Nexlify's
+                Vision</h2>
+            <p class="text-lg md:text-xl text-center mb-12 max-w-3xl mx-auto font-inter fade-in-up">Revolutionizing
+                finance with innovation, reach, and trust.</p>
+            <!-- Key Points -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div class="glass-card p-8 rounded-xl shadow-xl hover:scale-105 transition transform fade-in-up"
+                    style="animation-delay: 0s;">
+                    <svg class="w-10 h-10 text-gold mb-4 hover:text-gold-light transition" fill="currentColor"
+                        viewBox="0 0 20 20">
+                        <path
+                            d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zM3 10a1 1 0 01-1 1H1a1 1 0 110-2h1a1 1 0 011 1zM5.05 13.536A1 1 0 106.465 14.95l.708.707a1 1 0 101.414-1.414l-.707-.707zM14.343 14.243a1 1 0 00-1.414 1.414l.707.707a1 1 0 001.414-1.414l-.707-.707zM9 16a1 1 0 102 0v-1a1 1 0 10-2 0v1zM10 6a4 4 0 100 8 4 4 0 000-8z" />
+                    </svg>
+                    <h3 class="text-2xl font-poppins font-bold mb-2">Innovation</h3>
+                    <p class="font-inter text-gray-200">Advanced tech to redefine financial efficiency.</p>
+                </div>
+                <div class="glass-card p-8 rounded-xl shadow-xl hover:scale-105 transition transform fade-in-up"
+                    style="animation-delay: 0.2s;">
+                    <svg class="w-10 h-10 text-gold mb-4 hover:text-gold-light transition" fill="currentColor"
+                        viewBox="0 0 20 20">
+                        <path
+                            d="M10 2a8 8 0 00-8 8c0 1.69.526 3.26 1.422 4.552l-.707.707a1 1 0 001.414 1.414l.707-.707A7.963 7.963 0 0010 18a8 8 0 008-8 8 8 0 00-8-8zm0 14a6 6 0 01-6-6 6 6 0 0112 0 6 6 0 01-6 6zm0-10a1 1 0 00-1 1v3a1 1 0 002 0V7a1 1 0 00-1-1zm0 6a Oswald 1 0 100 2 1 1 0 000-2z" />
+                    </svg>
+                    <h3 class="text-2xl font-poppins font-bold mb-2">Global Reach</h3>
+                    <p class="font-inter text-gray-200">Empowering 50k+ users in 30+ countries.</p>
+                </div>
+                <div class="glass-card p-8 rounded-xl shadow-xl hover:scale-105 transition transform fade-in-up"
+                    style="animation-delay: 0.4s;">
+                    <svg class="w-10 h-10 text-gold mb-4 hover:text-gold-light transition" fill="currentColor"
+                        viewBox="0 0 20 20">
+                        <path
+                            d="M10 2a8 8 0 100 16 8 8 0 000-16zm0 14a6 6 0 110-12 6 6 0 010 12zm-1-9a1 1 0 00-1 1v4a1 1 0 002 bym 0V8a1 1 0 00-1-1zm2 0a1 1 0 00-1 1v4a1 1 0 002 0V8a1 1 0 00-1-1z" />
+                    </svg>
+                    <h3 class="text-2xl font-poppins font-bold mb-2">Customer-Centric</h3>
+                    <p class="font-inter text-gray-200">Personalized solutions with 24/7 support.</p>
+                </div>
+            </div>
+            <!-- Slider -->
+            <div class="relative w-full max-w-5xl mx-auto">
+                <div class="slider overflow-hidden rounded-xl shadow-2xl">
+                    <div class="slide flex items-center bg-gray-900 p-8 fade-in-up" id="frame">
+                        <img src="/images/team.jpg" alt="Team" class="w-1/2 rounded-lg mr-8 shadow-md">
+                        <div>
+                            <h3 class="text-3xl font-poppins font-bold mb-3">Our Visionary Team</h3>
+                            <p class="font-inter text-gray-200">Innovators crafting the future of finance.</p>
+                        </div>
+                    </div>
+                    <div class="slide flex items-center bg-gray-900 p-8 hidden fade-in-up" id="frame">
+                        <img src="/images/world.jpg" alt="Map" class="w-1/2 rounded-lg mr-8 shadow-md">
+                        <div>
+                            <h3 class="text-3xl font-poppins font-bold mb-3">Worldwide Influence</h3>
+                            <p class="font-inter text-gray-200">Tailored tools for global businesses.</p>
+                        </div>
+                    </div>
+                    <div class="slide flex items-center bg-gray-900 p-8 hidden fade-in-up" id="frame">
+                        <img src="/images/company.jpg" alt="Testimonial" class="w-1/2 rounded-lg mr-8 shadow-md">
+                        <div>
+                            <h3 class="text-3xl font-poppins font-bold mb-3">Trusted by Leaders</h3>
+                            <p class="font-inter text-gray-200">"Nexlify transformed our operations." - CEO, TechCorp
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slider Controls -->
+                <div class="flex justify-center mt-6">
+                    <div class="flex space-x-2">
+                        <span class="dot w-4 h-4 bg-gold rounded-full cursor-pointer active relative"><span
+                                class="progress-bar"></span></span>
+                        <span class="dot w-4 h-4 bg-gray-600 rounded-full cursor-pointer relative"><span
+                                class="progress-bar"></span></span>
+                        <span class="dot w-4 h-4 bg-gray-600 rounded-full cursor-pointer relative"><span
+                                class="progress-bar"></span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="features" class="relative py-20">
+        <!-- Shine Effect -->
+        <div class="shine shine-3 absolute top-0 right-0"></div>
+        <!-- Hero Statement -->
+        <div class="text-center mb-12">
+            <h2 id="features-heading" class="text-4xl md:text-5xl font-poppins font-bold text-white mb-4 fade-in-up">
+                Nexlify scales with teams of any size</h2>
+        </div>
+        <!-- Navigation Tabs -->
+        <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-8 mb-12 px-6">
+            <button
+                class="tab-button active text-lg font-poppins font-semibold text-white hover:text-primary transition border-b-2 border-transparent hover:border-gold py-2 px-4 rounded-md"
+                data-tab="industry">By Industry</button>
+            <button
+                class="tab-button text-lg font-poppins font-semibold text-white hover:text-primary transition border-b-2 border-transparent hover:border-gold py-2 px-4 rounded-md"
+                data-tab="size">By Size</button>
+            <button
+                class="tab-button text-lg font-poppins font-semibold text-white hover:text-primary transition border-b-2 border-transparent hover:border-gold py-2 px-4 rounded-md"
+                data-tab="use-case">By Use Case</button>
+        </div>
+        <!-- Feature Showcases -->
+        <div class="container mx-auto px-6">
+            <div class="feature-grid">
+                <!-- Industry Cards -->
+                <div class="feature-card industry" data-tab="industry">
+                    <div class="card-inner">
+                        <img src="/images/figma.jpg" alt="Figma" class="w-full h-full object-contain">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="text-xl font-poppins font-bold text-white">Figma</h3>
+                        <p class="text-sm font-inter text-text mt-2">Streamlines development and strengthens security
+                        </p>
+                        <div class="mt-4">
+                            <span
+                                class="bg-secondary text-primary text-xs font-inter px-2 py-1 rounded-full">Technology</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-card industry" data-tab="industry">
+                    <div class="card-inner">
+                        <img src="/images/mercedes.jpg" alt="Mercedes-Benz" class="w-full h-full object-contain">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="text-xl font-poppins font-bold text-white">Mercedes-Benz</h3>
+                        <p class="text-sm font-inter text-text mt-2">Standardizes source code and automates onboarding
+                        </p>
+                        <div class="mt-4">
+                            <span
+                                class="bg-secondary text-primary text-xs font-inter px-2 py-1 rounded-full">Automotive</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-card industry" data-tab="industry">
+                    <div class="card-inner">
+                        <img src="/images/pexels.jpg" alt="Mercado Libre" class="w-full h-full object-contain">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="text-xl font-poppins font-bold text-white">Mercado Libre</h3>
+                        <p class="text-sm font-inter text-text mt-2">Cuts coding time by 50%</p>
+                        <div class="mt-4">
+                            <span class="bg-secondary text-primary text-xs font-inter px-2 py-1 rounded-full">Financial
+                                Services</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Size Cards -->
+                <div class="feature-card size" data-tab="size">
+                    <div class="card-inner">
+                        <img src="/images/startp.jpg" alt="Startup" class="w-full h-full object-contain">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="text-xl font-poppins font-bold text-white">Startup</h3>
+                        <p class="text-sm font-inter text-text mt-2">Rapid onboarding and cost-effective</p>
+                        <div class="mt-4">
+                            <span
+                                class="bg-secondary text-primary text-xs font-inter px-2 py-1 rounded-full">Startups</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-card size" data-tab="size">
+                    <div class="card-inner">
+                        <img src="/images/automation.jpg" alt="SMB" class="w-full h-full object-contain">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="text-xl font-poppins font-bold text-white">SMB</h3>
+                        <p class="text-sm font-inter text-text mt-2">Automated workflows and scalable tools</p>
+                        <div class="mt-4">
+                            <span
+                                class="bg-secondary text-primary text-xs font-inter px-2 py-1 rounded-full">SMBs</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-card size" data-tab="size">
+                    <div class="card-inner">
+                        <img src="/images/enterprise.jpg" alt="Enterprise" class="w-full h-full object-contain">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="text-xl font-poppins font-bold text-white">Enterprise</h3>
+                        <p class="text-sm font-inter text-text mt-2">Robust security and global compliance</p>
+                        <div class="mt-4">
+                            <span
+                                class="bg-secondary text-primary text-xs font-inter px-2 py-1 rounded-full">Enterprises</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Use Case Cards -->
+                <div class="feature-card use-case" data-tab="use-case">
+                    <div class="card-inner">
+                        <img src="/images/code.jpg" alt="Analytics" class="w-full h-full object-contain">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="text-xl font-poppins font-bold text-white">Analytics</h3>
+                        <p class="text-sm font-inter text-text mt-2">Deep insights and predictive models</p>
+                        <div class="mt-4">
+                            <span
+                                class="bg-secondary text-primary text-xs font-inter px-2 py-1 rounded-full">Analytics</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-card use-case" data-tab="use-case">
+                    <div class="card-inner">
+                        <img src="/images/auto.jpg" alt="Automation" class="w-full h-full object-contain">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="text-xl font-poppins font-bold text-white">Automation</h3>
+                        <p class="text-sm font-inter text-text mt-2">Zero errors and time savings</p>
+                        <div class="mt-4">
+                            <span
+                                class="bg-secondary text-primary text-xs font-inter px-2 py-1 rounded-full">Automation</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-card use-case" data-tab="use-case">
+                    <div class="card-inner">
+                        <img src="/images/exit.jpg" alt="Compliance" class="w-full h-full object-contain">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="text-xl font-poppins font-bold text-white">Compliance</h3>
+                        <p class="text-sm font-inter text-text mt-2">Audit-ready and global standards</p>
+                        <div class="mt-4">
+                            <span
+                                class="bg-secondary text-primary text-xs font-inter px-2 py-1 rounded-full">Compliance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="blog" class="relative py-20">
+    <!-- Hero Statement -->
+    <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-poppins font-bold text-white slide-in">Explore Insights from the Future of Finance</h2>
+        <p class="text-lg md:text-xl font-inter text-gray-200 mt-4 slide-in" style="animation-delay: 0.2s">Stay ahead with the latest trends and innovations.</p>
+    </div>
+    <!-- Blog Posts -->
+    <div class="container mx-auto px-6">
+        <div class="blog-grid">
+            <div class="blog-card">
+                <div class="card-front">
+                    <div class="image-container"><div class="parallax-image" style="background-image: url('/images/code.jpg');"></div></div>
+                    <div class="card-content">
+                        <a href="#" class="text-xl font-poppins font-bold text-white hover:text-primary">The Rise of AI in Finance</a>
+                        <p class="text-sm font-inter text-text mt-2">Discover how AI is transforming financial strategies.</p>
+                        <p class="text-xs font-inter text-gray-400 mt-2">May 13, 2025, 08:01 PM CEST</p>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <a href="#" class="text-xl font-poppins font-bold text-white hover:text-blue-900">Read More</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="card-front">
+                    <div class="image-container"><div class="parallax-image" style="background-image: url('/images/auto.jpg');"></div></div>
+                    <div class="card-content">
+                        <a href="#" class="text-xl font-poppins font-bold text-white hover:text-primary">Blockchain for Secure Transactions</a>
+                        <p class="text-sm font-inter text-text mt-2">Explore the impact of blockchain on transaction security.</p>
+                        <p class="text-xs font-inter text-gray-400 mt-2">May 10, 2025, 03:15 PM CEST</p>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <a href="#" class="text-xl font-poppins font-bold text-white hover:text-blue-900">Read More</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="card-front">
+                    <div class="image-container"><div class="parallax-image" style="background-image: url('/images/exit.jpg');"></div></div>
+                    <div class="card-content">
+                        <a href="#" class="text-xl font-poppins font-bold text-white hover:text-primary">Future of Fintech Innovations</a>
+                        <p class="text-sm font-inter text-text mt-2">Insights into the next wave of fintech breakthroughs.</p>
+                        <p class="text-xs font-inter text-gray-400 mt-2">May 7, 2025, 09:30 AM CEST</p>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <a href="#" class="text-xl font-poppins font-bold text-white hover:text-blue-900">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="pricing" class="relative py-20">
+    <!-- Hero Statement -->
+    <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-poppins font-bold text-white pricing-hero">Premium Plans for Every Stage of Growth</h2>
+        <p class="text-lg md:text-xl font-inter text-gray-200 mt-4 pricing-hero">Choose the plan that fits your business needs.</p>
+    </div>
+    <!-- Pricing Cards -->
+    <div class="container mx-auto px-6">
+        <div class="pricing-grid">
+            <!-- Starter Plan -->
+            <div class="pricing-card">
+                <h3 class="text-2xl font-poppins font-bold text-white mb-4">Starter</h3>
+                <p class="price text-4xl font-poppins font-bold text-primary mb-6">$29<span class="text-lg text-gray-200">/mo</span></p>
+                <ul class="text-sm font-inter text-text mb-8">
+                    <li class="flex items-center mb-2"><svg class="w-5 h-5 mr-2 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586l-2.293-2.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l8-8a1 1 0 000-1.414z"/></svg>Basic Analytics</li>
+                    <li class="flex items-center mb-2"><svg class="w-5 h-5 mr-2 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586l-2.293-2.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l8-8a1 1 0 000-1.414z"/></svg>Email Support</li>
+                    <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586l-2.293-2.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l8-8a1 1 0 000-1.414z"/></svg>5 Users</li>
+                </ul>
+                <button class="bg-primary text-white px-6 py-3 rounded-full font-inter hover:bg-blue-900 hover:scale-105 transition transform">Get Started</button>
+            </div>
+            <!-- Pro Plan -->
+            <div class="pricing-card popular">
+                <div class="badge">Most Popular</div>
+                <h3 class="text-2xl font-poppins font-bold text-white mb-4">Pro</h3>
+                <p class="price text-4xl font-poppins font-bold text-primary mb-6">$99<span class="text-lg text-gray-200">/mo</span></p>
+                <ul class="text-sm font-inter text-text mb-8">
+                    <li class="flex items-center mb-2"><svg class="w-5 h-5 mr-2 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586l-2.293-2.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l8-8a1 1 0 000-1.414z"/></svg>Advanced Analytics</li>
+                    <li class="flex items-center mb-2"><svg class="w-5 h-5 mr-2 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586l-2.293-2.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l8-8a1 1 0 000-1.414z"/></svg>24/7 Support</li>
+                    <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586l-2.293-2.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l8-8a1 1 0 000-1.414z"/></svg>50 Users</li>
+                </ul>
+                <button class="bg-primary text-white px-6 py-3 rounded-full font-inter hover:bg-blue-900 hover:scale-105 transition transform">Get Started</button>
+            </div>
+            <!-- Enterprise Plan -->
+            <div class="pricing-card">
+                <h3 class="text-2xl font-poppins font-bold text-white mb-4">Enterprise</h3>
+                <p class="price text-4xl font-poppins font-bold text-primary mb-6">Custom</p>
+                <ul class="text-sm font-inter text-text mb-8">
+                    <li class="flex items-center mb-2"><svg class="w-5 h-5 mr-2 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586l-2.293-2.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l8-8a1 1 0 000-1.414z"/></svg>Custom Analytics</li>
+                    <li class="flex items-center mb-2"><svg class="w-5 h-5 mr-2 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586l-2.293-2.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l8-8a1 1 0 000-1.414z"/></svg>Dedicated Support</li>
+                    <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586l-2.293-2.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l8-8a1 1 0 000-1.414z"/></svg>Unlimited Users</li>
+                </ul>
+                <button class="bg-primary text-white px-6 py-3 rounded-full font-inter hover:bg-blue-900 hover:scale-105 transition transform">Get Started</button>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="contact" class="relative py-20">
+    <!-- Hero Statement -->
+    <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-poppins font-bold text-white contact-hero">Get in Touch with Nexlify</h2>
+        <p class="text-lg md:text-xl font-inter text-gray-200 mt-4 contact-hero">We’re here to help you grow smarter and faster.</p>
+        <hr class="border-gray-300 w-1/2 mx-auto mt-6 mb-12">
+    </div>
+    <!-- Contact Content -->
+    <div class="container mx-auto px-6">
+        <div class="contact-grid">
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <div class="form-card">
+                    <input type="text" placeholder="Your Name" class="input-field" required>
+                    <input type="email" placeholder="Your Email" class="input-field" required>
+                    <textarea placeholder="Your Message" class="input-field textarea" rows="5" required></textarea>
+                    <button class="bg-primary text-white px-6 py-3 rounded-full font-inter hover:bg-blue-900 hover:scale-105 transition transform">Send Message</button>
+                </div>
+            </div>
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <div class="info-card">
+                    <div class="info-item">
+                        <svg class="w-6 h-6 text-primary mr-3" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884zM18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+                        <p class="font-inter text-white">support@nexlify.com</p>
+                    </div>
+                    <div class="info-item">
+                        <svg class="w-6 h-6 text-primary mr-3" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+                        <p class="font-inter text-white">+1 (555) 123-4567</p>
+                    </div>
+                    <div class="info-item">
+                        <svg class="w-6 h-6 text-primary mr-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+                        <p class="font-inter text-white">123 Finance St, San Francisco, CA 94105</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer id="footer" class="py-6">
+    <div class="container mx-auto px-6 text-center">
+        <div class="mb-4">
+            <a href="#" class="text-2xl font-poppins font-bold text-white hover:text-blue-900 transition">Nexlify</a>
+        </div>
+        <div class="mb-4">
+            <a href="#home" class="text-sm font-inter text-gray-200 hover:text-blue-900 mx-2 transition">Home</a>
+            <a href="#features" class="text-sm font-inter text-gray-200 hover:text-blue-900 mx-2 transition">Features</a>
+            <a href="#pricing" class="text-sm font-inter text-gray-200 hover:text-blue-900 mx-2 transition">Pricing</a>
+            <a href="#blog" class="text-sm font-inter text-gray-200 hover:text-blue-900 mx-2 transition">Blog</a>
+            <a href="#contact" class="text-sm font-inter text-gray-200 hover:text-blue-900 mx-2 transition">Contact</a>
+        </div>
+        <div class="mb-4">
+            <a href="#" class="text-gray-200 hover:text-blue-900 mx-2 transition"><svg class="w-5 h-5 inline" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-2.717 0-4.92 2.203-4.92 4.917 0 .386.045.762.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.732-.666 1.585-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.397 0-.79-.023-1.175-.068 2.187 1.405 4.788 2.224 7.582 2.224 9.055 0 14.01-7.496 14.01-13.986 0-.214-.005-.426-.014-.637.962-.695 1.797-1.562 2.457-2.549z"/></svg></a>
+            <a href="#" class="text-gray-200 hover:text-blue-900 mx-2 transition"><svg class="w-5 h-5 inline" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-1.338-.03-3.058-1.865-3.058-1.867 0-2.154 1.455-2.154 2.962v5.7h-3v-11h2.881v1.578h.041c.395-.749 1.361-1.865 3.523-1.865 3.768 0 4.467 2.477 4.467 5.694v6.593z"/></svg></a>
+        </div>
+        <p class="text-xs font-inter text-gray-400">© 2025 Nexlify. All rights reserved.</p>
+    </div>
+</footer>
+    <script src="/app.js"></script>
+</body>
+
+</html>
